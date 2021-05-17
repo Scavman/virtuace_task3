@@ -2,7 +2,7 @@ package com.example.virtuace;
 
 public class Task3 {
     public static void main(String[] args) {
-        showStopLightColor(5.0001F * 12);
+        showStopLightColor(5);
     }
 
     //shows the stoplight's expected color after an hour + input minutes
