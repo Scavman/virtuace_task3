@@ -2,21 +2,25 @@ package com.example.virtuace;
 
 public class Task3 {
     public static void main(String[] args) {
-        showStopLightColor(5);
+        showStopLightColor(3F);
     }
 
     //shows the stoplight's expected color after an hour + input minutes
-    public static void showStopLightColor(float minutes) {
+    public static void showStopLightColor(float inputMinutes) {
         String green = "green"; // 3 min
         String yellow = "yellow"; // 1 min
         String red = "red"; // 1 min
 
-        if(minutes % 3 >= 0 && minutes % 4 >= 0 && minutes % 4 < 3 && minutes % 4 >= minutes % 5) {
+        float minutes = inputMinutes;
+
+        if(minutes > 5)
+            minutes = inputMinutes % 5;
+
+        if(minutes < 3 || minutes == 5)
             System.out.println(green);
-        } else if (minutes % 3 >= 0 && minutes % 2 >= 1){
+        else if (minutes < 4)
             System.out.println(yellow);
-        } else {
+        else
             System.out.println(red);
-        }
     }
 }
